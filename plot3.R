@@ -1,6 +1,8 @@
 # Read a file into R filtering it with an sql statement.
-# Part of the "sqldf" package.
+# Code uses the "sqldf" package.
+# File "household_power_consumption.txt" should be in the working directory.
 
+library(sqldf)
 File <- "household_power_consumption.txt"
 Sql <- "SELECT * FROM file WHERE Date='1/2/2007' OR Date='2/2/2007'"
 pwr_cons <- read.csv2.sql(File,Sql)
